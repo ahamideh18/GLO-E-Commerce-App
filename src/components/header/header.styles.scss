@@ -3,21 +3,18 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
+    margin-top: 20px;
 
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    a:hover {
-      opacity: 60%;
+    .logo-container {
+      .logo {
+        height: 100%;
+        transform: scale(1.5);
+      }
     }
     
     .logo-container {
       height: 100%;
       width: 70px;
-      padding: 25px;
     }
   
     .options {
@@ -29,6 +26,15 @@
   
       .option {
         padding: 10px 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+  
+      a:hover {
+        opacity: 60%;
       }
     }
   }
