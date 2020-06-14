@@ -17,7 +17,7 @@ class Directory extends React.Component {
             linkUrl: 'accs'
           },
           {
-            title: 'sw',
+            title: 'memorabilia',
             imageUrl: 'https://blog.barrystickets.com/wp-content/uploads/2013/01/Miami-Heat-Championship-Rings-.jpg',
             id: 2,
             linkUrl: 'sw'
@@ -30,7 +30,7 @@ class Directory extends React.Component {
           },
           {
             title: 'womens',
-            imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+            imageUrl: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bb-lead3-1562610613.jpg',
             size: 'large',
             id: 4,
             linkUrl: 'womens'

@@ -26,14 +26,10 @@
   
       .option {
         padding: 10px 15px;
-      }
-
-      a {
-        text-decoration: none;
-        color: black;
+        cursor: pointer;
       }
   
-      a:hover {
+      .option:hover {
         opacity: 60%;
       }
     }

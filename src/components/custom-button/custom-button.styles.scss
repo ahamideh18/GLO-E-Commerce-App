@@ -8,9 +8,8 @@
     font-size: 15px;
     background-color: black;
     color: white;
+    font-family: "Novecento Wide Bold";
     text-transform: uppercase;
-    font-family: 'Open Sans Condensed';
-    font-weight: bolder;
     border: none;
     cursor: pointer;
   
@@ -18,5 +17,15 @@
       background-color: white;
       color: black;
       border: 1px solid black;
+    }
+
+    &.google-sign-in {
+      background-color: #4285f4;
+      color: white;
+      border: none;
+
+      &:hover {
+        background-color: #357ae8;
+      }
     }
   }
