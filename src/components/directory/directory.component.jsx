@@ -20,7 +20,7 @@ class Directory extends React.Component {
             title: 'memorabilia',
             imageUrl: 'https://blog.barrystickets.com/wp-content/uploads/2013/01/Miami-Heat-Championship-Rings-.jpg',
             id: 2,
-            linkUrl: 'sw'
+            linkUrl: 'memorabilia'
           },
           {
             title: 'snkrs',
