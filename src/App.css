@@ -1,13 +1,19 @@
+html {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
 body {
-    font-family: "Novecento Wide Bold";
-    padding: 20px 60px;
+  font-family: "Novecento Wide Bold";
+  padding: 20px 60px;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
