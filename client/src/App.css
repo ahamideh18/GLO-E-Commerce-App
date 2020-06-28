@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Novecentosanswide-Bold';
+  src: url('./assets/Novocento-Sans-Bold/webFonts/Novecentosanswide-Bold/font.woff')format('woff'), url('./assets/Novocento-Sans-Bold/webFonts/Novecentosanswide-Bold/font.woff2')format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+}
+
+body {
+  font-family: 'Novecentosanswide-Bold';
+  padding: 20px 60px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
