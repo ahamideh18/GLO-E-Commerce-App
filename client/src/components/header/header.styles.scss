@@ -1,36 +1,49 @@
 .header {
-    height: 70px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
 
-    .logo-container {
-      .logo {
-        height: 100%;
-        transform: scale(1.5);
-      }
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  .logo-container {
+    @media screen and (max-width: 800px) {
+      width: 50px;
+      margin: 10px;
     }
-    
-    .logo-container {
+    height: 100%;
+    width: 70px;
+    .logo {
       height: 100%;
-      width: 70px;
-    }
-  
-    .options {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-  
-      .option {
-        padding: 10px 15px;
-        cursor: pointer;
-      }
-  
-      .option:hover {
-        opacity: 60%;
-      }
+      transform: scale(1.5);
     }
   }
+
+  .options {
+    @media screen and (max-width: 800px) {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .option {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+
+    .option:hover {
+      opacity: 60%;
+    }
+  }
+}

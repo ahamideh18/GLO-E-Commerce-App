@@ -1,4 +1,8 @@
 .sign-in {
+  @media screen and (max-width: 800px) {
+    margin-bottom: 30px;
+  }
+
   width: 380px;
   display: flex;
   flex-direction: column;
