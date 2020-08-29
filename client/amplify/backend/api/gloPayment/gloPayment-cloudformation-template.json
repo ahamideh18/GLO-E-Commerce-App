@@ -14,15 +14,15 @@
         },
     
     
-          "functionpaymentName": {
+          "functiongloPaymentName": {
             "Type": "String",
-            "Default": "functionpaymentName"
+            "Default": "functiongloPaymentName"
           },
         
           
-          "functionpaymentArn": {
+          "functiongloPaymentArn": {
             "Type": "String",
-            "Default": "functionpaymentArn"
+            "Default": "functiongloPaymentArn"
           }
         
           
@@ -45,16 +45,16 @@
         
         
         
-      "gloAPI": {
+      "gloPayment": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "gloAPI",
+          "Name": "gloPayment",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "gloAPI"
+              "title": "gloPayment"
             },
             "host": {
                 "Fn::Join": [
@@ -176,7 +176,7 @@
                             
                             {
                                 
-                                "Ref": "functionpaymentArn"
+                                "Ref": "functiongloPaymentArn"
                             },
                             
                             "/invocations"
@@ -275,7 +275,7 @@
                           
                           {
                             
-                            "Ref": "functionpaymentArn"
+                            "Ref": "functiongloPaymentArn"
                           },
                           
                           "/invocations"
@@ -332,12 +332,12 @@
                   
         
         
-        "functionpaymentPermissiongloAPI": {
+        "functiongloPaymentPermissiongloPayment": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
                     {
-                        "Ref":  "functionpaymentName"
+                        "Ref":  "functiongloPaymentName"
                     },
                     
                     "Action": "lambda:InvokeFunction",
@@ -356,7 +356,7 @@
                             },
                             ":",
                             {
-                                "Ref": "gloAPI"
+                                "Ref": "gloPayment"
                             },
                             "/*/*/*"
                         ]
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWgloAPI": {
+      "DeploymentAPIGWgloPayment": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -381,7 +381,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "gloAPI"
+            "Ref": "gloPayment"
           }
         }
       }
@@ -389,15 +389,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "gloAPI"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "gloPayment"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "gloAPI"
+          "Value": "gloPayment"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "gloAPI"}
+          "Value": {"Ref": "gloPayment"}
         }
     }
   }

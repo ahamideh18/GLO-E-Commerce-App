@@ -1,6 +1,6 @@
 {
 	"function": {
-		"payment": {
+		"gloPayment": {
 			"build": true,
 			"providerPlugin": "awscloudformation",
 			"service": "Lambda",
@@ -8,13 +8,13 @@
 		}
 	},
 	"api": {
-		"gloAPI": {
+		"gloPayment": {
 			"service": "API Gateway",
 			"providerPlugin": "awscloudformation",
 			"dependsOn": [
 				{
 					"category": "function",
-					"resourceName": "payment",
+					"resourceName": "gloPayment",
 					"attributes": [
 						"Name",
 						"Arn"

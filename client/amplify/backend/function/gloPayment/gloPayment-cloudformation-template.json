@@ -36,13 +36,13 @@
             "FunctionName": {
                 "Fn::If": [
                     "ShouldNotCreateEnvResources",
-                    "payment",
+                    "gloPayment",
                     {
 
                         "Fn::Join": [
                             "",
                             [
-                                "payment",
+                                "gloPayment",
                                 "-",
                                 {
                                     "Ref": "env"
@@ -67,13 +67,13 @@
                 "RoleName": {
                     "Fn::If": [
                         "ShouldNotCreateEnvResources",
-                        "gloLambdaRole98a0f1d9",
+                        "gloLambdaRole2ba06993",
                         {
 
                             "Fn::Join": [
                                 "",
                                 [
-                                    "gloLambdaRole98a0f1d9",
+                                    "gloLambdaRole2ba06993",
                                     "-",
                                     {
                                         "Ref": "env"

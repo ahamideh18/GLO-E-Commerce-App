@@ -2,29 +2,29 @@
     "paths": [
         {
             "name": "/payment",
-            "lambdaFunction": "payment",
+            "lambdaFunction": "gloPayment",
             "privacy": {
                 "open": true
             }
         }
     ],
-    "resourceName": "gloAPI",
-    "apiName": "gloAPI",
+    "resourceName": "gloPayment",
+    "apiName": "gloPayment",
     "functionArns": [
         {
-            "lambdaFunction": "payment"
+            "lambdaFunction": "gloPayment"
         }
     ],
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-glo-dev-161257-authRole",
-        "unAuthRoleName": "amplify-glo-dev-161257-unauthRole"
+        "authRoleName": "amplify-glo-dev-185040-authRole",
+        "unAuthRoleName": "amplify-glo-dev-185040-unauthRole"
     },
     "dependsOn": [
         {
             "category": "function",
-            "resourceName": "payment",
+            "resourceName": "gloPayment",
             "attributes": [
                 "Name",
                 "Arn"

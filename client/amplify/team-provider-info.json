@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-glo-dev-185040-authRole",
+            "UnauthRoleArn": "arn:aws:iam::279047723507:role/amplify-glo-dev-185040-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::279047723507:role/amplify-glo-dev-185040-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-glo-dev-185040-deployment",
+            "UnauthRoleName": "amplify-glo-dev-185040-unauthRole",
+            "StackName": "amplify-glo-dev-185040",
+            "StackId": "arn:aws:cloudformation:us-east-1:279047723507:stack/amplify-glo-dev-185040/134d1640-ea4a-11ea-8b45-0a6865628217",
+            "AmplifyAppId": "d3eejfgqi9jjr"
+        }
+    }
+}
