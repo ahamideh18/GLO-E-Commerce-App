@@ -6,11 +6,15 @@ import {
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-
 import './index.css';
 import App from './App';
 
 import { store, persistor } from './redux/store';
+
+import Amplify from 'aws-amplify'
+import config from './aws-exports'
+
+Amplify.configure(config)
 
 ReactDOM.render(
   <Provider store={store}>

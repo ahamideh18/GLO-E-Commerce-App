@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/payment",
+            "lambdaFunction": "payment",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "globackend",
+    "apiName": "globackend",
+    "functionArns": [
+        {
+            "lambdaFunction": "payment"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-glo-dev-153216-authRole",
+        "unAuthRoleName": "amplify-glo-dev-153216-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "payment",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
