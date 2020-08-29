@@ -45,16 +45,16 @@
         
         
         
-      "globackend": {
+      "gloAPI": {
         "Type": "AWS::ApiGateway::RestApi",
         "Properties": {
           "Description": "",
-          "Name": "globackend",
+          "Name": "gloAPI",
           "Body": {
             "swagger": "2.0",
             "info": {
               "version": "2018-05-24T17:52:00Z",
-              "title": "globackend"
+              "title": "gloAPI"
             },
             "host": {
                 "Fn::Join": [
@@ -332,7 +332,7 @@
                   
         
         
-        "functionpaymentPermissionglobackend": {
+        "functionpaymentPermissiongloAPI": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
                 "FunctionName": 
@@ -356,7 +356,7 @@
                             },
                             ":",
                             {
-                                "Ref": "globackend"
+                                "Ref": "gloAPI"
                             },
                             "/*/*/*"
                         ]
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWglobackend": {
+      "DeploymentAPIGWgloAPI": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",
@@ -381,7 +381,7 @@
             ]
           },
           "RestApiId": {
-            "Ref": "globackend"
+            "Ref": "gloAPI"
           }
         }
       }
@@ -389,15 +389,15 @@
     "Outputs": {
         "RootUrl": {
             "Description": "Root URL of the API gateway",
-            "Value": {"Fn::Join": ["", ["https://", {"Ref": "globackend"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
+            "Value": {"Fn::Join": ["", ["https://", {"Ref": "gloAPI"}, ".execute-api.", {"Ref": "AWS::Region"}, ".amazonaws.com/", {"Fn::If": ["ShouldNotCreateEnvResources","Prod", {"Ref": "env"} ]}]]}
         },
         "ApiName": {
           "Description": "API Friendly name",
-          "Value": "globackend"
+          "Value": "gloAPI"
         },
         "ApiId": {
           "Description": "API ID (prefix of API URL)",
-          "Value": {"Ref": "globackend"}
+          "Value": {"Ref": "gloAPI"}
         }
     }
   }

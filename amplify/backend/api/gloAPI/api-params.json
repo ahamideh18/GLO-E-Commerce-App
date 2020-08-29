@@ -8,8 +8,8 @@
             }
         }
     ],
-    "resourceName": "globackend",
-    "apiName": "globackend",
+    "resourceName": "gloAPI",
+    "apiName": "gloAPI",
     "functionArns": [
         {
             "lambdaFunction": "payment"
@@ -18,8 +18,8 @@
     "privacy": {
         "auth": 0,
         "unauth": 0,
-        "authRoleName": "amplify-glo-dev-153216-authRole",
-        "unAuthRoleName": "amplify-glo-dev-153216-unauthRole"
+        "authRoleName": "amplify-glo-dev-161257-authRole",
+        "unAuthRoleName": "amplify-glo-dev-161257-unauthRole"
     },
     "dependsOn": [
         {
