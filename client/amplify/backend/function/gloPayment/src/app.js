@@ -8,7 +8,6 @@ See the License for the specific language governing permissions and limitations 
 
 
 
-
 var express = require('express')
 var bodyParser = require('body-parser')
 var awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
