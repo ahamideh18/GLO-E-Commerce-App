@@ -10,7 +10,7 @@ const StripeCheckoutButton = ({ price }) => {
     const publishableKey = 'pk_test_51GvDkNBDHRwhBcsS9Pc0lCayoiCAMZd5LubvFeXlFd6sjGRK6nEVxDOqmd5u5VM2PSRpsPqi9yOIDfkqJjPA7dPl00avHpaF5Q';
 
     const onToken = token => {
-        API.post('stripePayment', '/payment', { amount: priceForStripe, token })
+        API.post('gloPayment', '/payment', { amount: priceForStripe, token })
             .then(response => {
                 alert('Payment Successful')
             }).catch(
