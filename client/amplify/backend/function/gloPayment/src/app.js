@@ -19,7 +19,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(awsServerlessExpressMiddleware.eventContext())
 
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripe = require('stripe')('sk_test_51GvDkNBDHRwhBcsSeYf0T9ixIM04oTEw7WKn7NDzII4jLQAtaBMLPCuqU7GCuw2xqH9ryeeQIw9RrOCfUNLYqAtl00MqGlmVVw');
 
 // Enable CORS for all methods
 app.use(function (req, res, next) {
