@@ -28,18 +28,26 @@ app.listen(port, error => {
     console.log('Server running on port ' + port);
 });
 
-app.post('/payment', (req, res) => {
-    const body = {
-        source: req.body.token.id,
-        amount: req.body.amount,
-        currency: 'usd'
-    };
-
-    stripe.charges.create(body, (stripeErr, stripeRes) => {
-        if (stripeErr) {
-            res.status(500).send({ error: stripeErr });
-        } else {
-            res.status(200).send({ success: stripeRes });
-        }
+app.post("/payment", async (req, res) => {
+    const amount = req.body.amount;
+    const session = await stripe.checkout.sessions.create({
+        payment_method_types: ["card"],
+        line_items: [
+            {
+                price_data: {
+                    currency: "cad",
+                    product_data: {
+                        name: "GLO Clothing",
+                    },
+                    unit_amount: amount,
+                },
+                quantity: 1,
+            },
+        ],
+        mode: "payment",
+        success_url: "https://localhst:3002/",
+        cancel_url: "https://localhst:3002/checkout",
     });
+
+    res.json({ id: session.id });
 });

@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{userId} {
+     	allow get, create: if request.auth != null && request.auth.uid ==userId;
+    }
+    
+    match /collections/{collection} {
+     	allow read;
+      allow write: if request.auth != null && request.auth.uid == 'DOcaPZ2kX9M5J0qFmXUZbt04Tbv1'
+    } 
+  }
+}
